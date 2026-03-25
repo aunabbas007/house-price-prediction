@@ -18,6 +18,8 @@ data = pd.read_csv("datanew.csv")
 # =========================
 data = data.dropna()
 
+data = data[data['price'] < data['price'].quantile(0.99)]
+
 data = data.drop([
     "id",
     "date",
