@@ -79,3 +79,20 @@ with open("model.pkl", "wb") as f:
     pickle.dump(model, f)
 
 print("Model saved as model.pkl")
+
+# ===========================
+# 9. VISUALIZING MODEL
+# ===========================
+import matplotlib.pyplot as plt
+
+# Actual vs Predicted
+plt.figure(figsize=(7, 5))
+plt.scatter(y_test, y_pred, alpha=0.4, color='steelblue')
+plt.plot([y_test.min(), y_test.max()], 
+         [y_test.min(), y_test.max()], 'r--')
+plt.xlabel('Actual Price')
+plt.ylabel('Predicted Price')
+plt.title('Actual vs Predicted House Prices')
+plt.tight_layout()
+plt.savefig('actual_vs_predicted.png')
+plt.show()

@@ -22,7 +22,7 @@ This project predicts house prices using Linear Regression based on features lik
 
 ## 📈 Evaluation
 
-* R² Score: ~0.3
+* R² Score: 0.5
 * Visualization:
 
   * Actual vs Predicted plot
